@@ -100,3 +100,6 @@ test.java
 
 project-dependencies.dot
 project-dependencies.png
+
+*.lock
+*.bin
