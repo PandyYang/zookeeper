@@ -1,0 +1,3 @@
+相关搭建教程参见尚硅谷zookeeper视频
+
+zookeeper详细教程参见官网
