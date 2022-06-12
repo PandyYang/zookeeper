@@ -1,4 +1,4 @@
-package com.pandy.case2;
+package com.pandy.DistributeLock;
 
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;

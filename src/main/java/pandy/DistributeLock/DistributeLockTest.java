@@ -1,4 +1,4 @@
-package com.pandy.case2;
+package pandy.DistributeLock;
 
 import org.apache.zookeeper.KeeperException;
 

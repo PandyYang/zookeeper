@@ -1,4 +1,4 @@
-package com.pandy.case3;
+package pandy.Curtor;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;

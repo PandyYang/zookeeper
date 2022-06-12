@@ -1,4 +1,4 @@
-package com.pandy.case1;
+package pandy.ServerClient;
 
 import org.apache.zookeeper.*;
 
