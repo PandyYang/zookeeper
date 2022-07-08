@@ -3,6 +3,6 @@
 for host in hadoop102 hadoop103 hadoop104
 do
         echo =============== $host ===============
-        ssh $host jps 
+        ssh $host $JAVA_HOME/bin/jps
 done
 
