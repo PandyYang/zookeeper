@@ -1,7 +1,7 @@
 # zookeeper简明教程
 此教程基于三个节点的集群进行学习及操作。分别为master, node1, node2节点。
 
-###启动
+### 启动
 ```shell
 ./zkCli.sh -server master:2181
 ```
