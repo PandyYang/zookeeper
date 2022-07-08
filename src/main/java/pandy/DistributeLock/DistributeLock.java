@@ -12,22 +12,22 @@ import java.util.concurrent.CountDownLatch;
 /**
  * @author: Pandy
  * @create: 2022/6/11
- *
+ * <p>
  * 分布式锁的实现
  **/
 public class DistributeLock {
 
     // 注意 逗号左右不能有空格 配置host映射
-    private String connectionString = "master:2181,node1:2181,node2:2181";
+    private final String connectionString = "master:2181,node1:2181,node2:2181";
 
-    private int sessionTimeout = 2000;
-    private ZooKeeper zkClient;
+    private final int sessionTimeout = 2000;
+    private final ZooKeeper zkClient;
 
     private String waitPath = "";
 
-    private CountDownLatch connectLatch = new CountDownLatch(1);
+    private final CountDownLatch connectLatch = new CountDownLatch(1);
 
-    private CountDownLatch waitLatch = new CountDownLatch(1);
+    private final CountDownLatch waitLatch = new CountDownLatch(1);
     private String currentMode;
 
     public DistributeLock() throws IOException, InterruptedException, KeeperException {
