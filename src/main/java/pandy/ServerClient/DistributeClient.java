@@ -12,6 +12,13 @@ import java.util.List;
 /**
  * @author: Pandy
  * @create: 2022/6/11
+ *
+ *
+ * 监听服务器上下线
+ * 在服务器上执行 create -e -s /servers/hadoop101 "hadoop101"
+ * 或者执行 delete /servers/hadoop1020000000008
+ *
+ * 模拟服务器上下线
  **/
 public class DistributeClient {
 

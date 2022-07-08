@@ -10,6 +10,8 @@ import java.nio.charset.StandardCharsets;
  * @create: 2022/6/11
  *
  * 注册zk分布式集群
+ *
+ * register 表示 将服务注册到servers下面
  **/
 public class DistributeServer {
 
@@ -25,7 +27,7 @@ public class DistributeServer {
         // 获取zk链接
         server.getConnect();
         // 注册服务器到zk集群
-        server.registry(args[0]);
+        server.registry("hadoop102");
 
         // 启动业务逻辑
         server.business();
@@ -35,8 +37,18 @@ public class DistributeServer {
         Thread.sleep(Long.MAX_VALUE);
     }
 
+    /**
+     * 创建一个临时节点
+     * @param hostname
+     * @throws InterruptedException
+     * @throws KeeperException
+     */
     private void registry(String hostname) throws InterruptedException, KeeperException {
-        String create = zkClient.create("/servers/" + hostname, hostname.getBytes(StandardCharsets.UTF_8), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+        String create = zkClient.create(
+                "/servers/" + hostname,
+                hostname.getBytes(StandardCharsets.UTF_8),
+                ZooDefs.Ids.OPEN_ACL_UNSAFE,
+                CreateMode.EPHEMERAL_SEQUENTIAL);
 
         System.out.println(hostname + " is online");
     }
