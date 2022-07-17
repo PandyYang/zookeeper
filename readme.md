@@ -1,5 +1,8 @@
 # zookeeper简明教程
 此教程基于三个节点的集群进行学习及操作。分别为master, node1, node2节点。
+我已经将三个集群的镜像打包，开箱即用：
+链接：https://pan.baidu.com/s/1MQAI4JfqMRIarDkUwa648Q?pwd=5j0x 
+提取码：5j0x 
 
 ### 启动
 ```shell
